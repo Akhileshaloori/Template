@@ -12,7 +12,7 @@
   <!-- navbar -->
 
   <nav class="navbar navbar-expand-lg fixed-top ">
-	  <a class="navbar-brand" href="index.html">Home</a>
+	  <a class="navbar-brand" data-value="header" href="#">Home</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -24,10 +24,10 @@
 	        <a class="nav-link" data-value="Upload" href="#">Upload Dataset</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link " data-value="blog" href="#">Algorithms</a>
+	        <a class="nav-link " data-value="algo" href="#">Algorithms</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link " data-value="portfolio" href="#">Analytics</a>
+	        <a class="nav-link " data-value="analytics" href="#">Analytics</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link " data-value="team" href="#">Prediction</a>
@@ -40,7 +40,7 @@
 	  </div>
 </nav>
 <!-- header -->
-<header class="header ">
+<header class="header" id="header">
   <div class="overlay"></div>
    <div class="container">
    	  <div class="description ">
@@ -48,7 +48,7 @@
   		Cardiovascular Diseases
   		<p>
   		Cardiovascular disease (CVD) is a class of diseases that involve the heart or blood vessels. CVD includes coronary artery diseases (CAD) such as angina and myocardial infarction (commonly known as a heart attack).</p>
-  		<button class="btn btn-outline-secondary btn-lg">See more</button>
+  		<a class="btn btn-outline-secondary btn-link btn-lg" href="https://en.wikipedia.org/wiki/Cardiovascular_disease">See more</a>
   	</h1>
   </div>
    </div>
@@ -79,44 +79,42 @@
 		</div>
 	</div>
 </div>
-<!-- Posts section -->
-<div class="blog" id="blog">
+<!-- Algo section -->
+<div class="algo" id="algo">
 	<div class="container">
 	<h1 class="text-center">Algorithms</h1>
 		<div class="row">
 			<div class="col-md-4 col-lg-4 col-sm-12">
 				<div class="card">
 					<div class="card-img">
-						<img src="images/posts/polit.jpg" class="img-fluid">
+						<img src="images/posts/svm.jpg" class="img-fluid">
 					</div>
 					
 					<div class="card-body">
 					<h4 class="card-title">Support Vector Machine</h4>
 						<p class="card-text">
 							
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+							Support-Vector Machines (SVMs, also support-vector networks) are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis.</p>
 					</div>
 					<div class="card-footer">
-						<a href="" class="card-link">Read more</a>
+						<a href="" class="card-link">View Results</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 col-lg-4 col-sm-12">
 				<div class="card">
 					<div class="card-img">
-						<img src="images/posts/images.jpg" class="img-fluid">
+						<img src="images/posts/decision.png" class="img-fluid">
 					</div>
 					
 					<div class="card-body">
 					   <h4 class="card-title">Decision Tree</h4>
 						<p class="card-text">
 							
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+							It is one of the predictive modeling approaches used in statistics, data mining and machine learning. It uses a decision tree to go from observations about an item to conclusions about the item's target value.</p>
 					</div>
 					<div class="card-footer">
-						<a href="" class="card-link">Read more</a>
+						<a href="" class="card-link"> View Results</a>
 					</div>
 				</div>
 			</div>
@@ -127,14 +125,13 @@
 					</div>
 					
 					<div class="card-body">
-					<h4 class="card-title">Post Title</h4>
+					<h4 class="card-title">Title</h4>
 						<p class="card-text">
-							
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Description about algorithm							
 						</p>
 					</div>
 					<div class="card-footer">
-						<a href="" class="card-link">Read more</a>
+						<a href="" class="card-link">View Results</a>
 					</div>
 				</div>
 			</div>
@@ -142,8 +139,8 @@
 	</div>
 </div>
 
-<!-- portfolio -->
-<div class="portfolio" id="portfolio">
+<!-- analytics -->
+<div class="analytics" id="analytics">
      <h1 class="text-center">Analytics</h1>
 	<div class="container">
 		<div class="row">
@@ -193,9 +190,15 @@
 				   <div class="form-group">
 				   	 <input type="text" class="form-control form-control-lg" placeholder="Name" name="Name">
 				   </div>
-				   <div class="form-group">
-				   	 <input type="email" class="form-control form-control-lg" placeholder="Blood Pressure" name="Blood Pressure">
+				 <div class="form-group">
+				   	 <input type="text" class="form-control form-control-lg" placeholder="CP" name="CP">
 				   </div>
+				 <div class="form-group">
+					<input type="text" class="form-control form-control-lg" placeholder="Age" name="Age">
+					</div>
+				 <div class="form-group">
+					<input type="text" class="form-control form-control-lg" placeholder="Blood Pressure" name="Blood Pressure">
+			   </div>
 				   <input type="submit" class="btn btn-secondary btn-block" value="Submit" name="Submit">
 				</div>
 			</div>
