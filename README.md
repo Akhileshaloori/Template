@@ -1,4 +1,4 @@
-## Landing page website 
+##  website 
 
 ![preview](images/scroll-eff.gif)
 
