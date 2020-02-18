@@ -5,7 +5,8 @@
 	 <!-- add bootstrap css file -->
 
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="css/main.css">
+	  <link rel="stylesheet" type="text/css" href="css/main.css">
+	 
 
 </head>
 <body>
@@ -18,24 +19,26 @@
 	  </button>
 
 	  <div class="collapse navbar-collapse " id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-4">
-	      
-	      <li class="nav-item">
-	        <a class="nav-link" data-value="Upload" href="#">Upload Dataset</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link " data-value="algo" href="#">Algorithms</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link " data-value="analytics" href="#">Analytics</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link " data-value="team" href="#">Prediction</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link " data-value="contact" href="#">Contact</a>
-	      </li>
-	    </ul>
+		<ul class="navbar-nav mr-4">
+			<!--
+			<li class="nav-item">
+			  <a class="nav-link" data-value="Upload" href="#">Upload Dataset</a>
+			</li> -->
+			<li class="nav-item">
+			  <a class="nav-link " data-value="algo" href="#">Algorithms</a>
+			</li>
+			<!--
+			<li class="nav-item">
+			  <a class="nav-link " data-value="analytics" href="#">Analytics</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link " data-value="team" href="#">Prediction</a>
+			</li>
+			-->
+			<li class="nav-item">
+			  <a class="nav-link " data-value="contact" href="#">Contact</a>
+			</li>
+		  </ul>
 	    
 	  </div>
 </nav>
@@ -56,7 +59,8 @@
 </header>
 
 <!-- about section -->
-<div class="Upload" id="Upload">
+<div class="container">
+<div class="Upload cont_div shown" id="Upload">
 	<div class="container">
 	  <h1 class="text-center">Upload Dataset</h1>
 		<div class="row">
@@ -78,9 +82,11 @@
 			</div>
 		</div>
 	</div>
+		
 </div>
+
 <!-- Algo section -->
-<div class="algo" id="algo">
+<div class="algo cont_div hidden" id="algo">
 	<div class="container">
 	<h1 class="text-center">Algorithms</h1>
 		<div class="row">
@@ -137,10 +143,11 @@
 			</div>
 		</div>
 	</div>
+	
 </div>
 
 <!-- analytics -->
-<div class="analytics" id="analytics">
+<div class="analytics cont_div hidden" id="analytics">
      <h1 class="text-center">Analytics</h1>
 	<div class="container">
 		<div class="row">
@@ -175,13 +182,15 @@
 			</div>
 		</div>
 	</div>
+	
+	
 </div>
 
 
 
 
 <!-- Team section -->
-<div class="team" id="team">
+<div class="team cont_div hidden" id="team">
 	<div class="container">
 	   <h1 class="text-center">Prediction</h1>
 		<form>
@@ -203,6 +212,12 @@
 				</div>
 			</div>
 		</form>
+	</div>	
+</div>
+
+	<div class="pager">
+		<button id="prev">Previous</button>
+		<button id="next">Next</button>
 	</div>
 </div>
 
@@ -236,6 +251,29 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src='js/main.js'></script>
+<script>
+	$('#next').click(function(){
+		var $next=  $('.shown').next();
+		
+		$('.shown').removeClass('shown').addClass('hidden');
+		
+		if($next.size()==0) $next=$('.cont_div').first();
+		
+		$next.addClass('shown');
+		
+	})
+	
+	$('#prev').click(function(){
+		var $prev=  $('.shown').prev();
+		
+		$('.shown').removeClass('shown').addClass('hidden');
+		
+		if($prev.size()==0) $prev=$('.cont_div').last();
+		
+		$prev.addClass('shown');
+		
+	})
+  </script>
 
 </body>
 </html>
