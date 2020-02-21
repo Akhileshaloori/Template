@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body{
+	padding: 0;
+	margin: 0;
+	background:#f4f4f4;
+	width: 100%;
+	margin: 20px auto;
+	overflow: auto;
+}
+html,h1,h2,h3,h4,h5,h6,a{
+	font-family: "Raleway";
+}
+
+.navbar{
+	background:#F97300;
+}
+.nav-link , .navbar-brand{
+	color: #f4f4f4;
+	cursor: pointer;
+}
+.nav-link{
+	margin-right: 1em !important;
+}
+.nav-link:hover{
+	background: #f4f4f4;
+	color: #f97300;
+
+}
+.navbar-collapse{
+ justify-content: flex-end;
+}
+.navbar-toggler{
+  background:#fff !important;
+}
+
+/*header style*/
+.header{
+	position: relative;
+	background-image: url('../images/heart.jpg');
+	height:100ch ;
+	background-size: cover;
+	background-position: center;
+}
+.overlay{
+	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(244, 244, 244, 0.79);
+}
+.description{
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 1em;
+
+}
+.description h1{
+	color:#F97300 ;
+}
+.description p{
+	color:#666;
+	font-size: 20px;
+	width: 50%;
+	line-height: 1.5;
+}
+.description a{
+	border:1px  solid #F97300;
+	background:#F97300;
+	color:white;
+}
+.Upload{
+	margin: 4em 0;
+	padding: 1em;
+	position: relative;
+}
+.Upload h1{
+	color:#F97300;
+	margin: 2em;
+}
+.Upload img{
+	height: 100%;
+    width: 100%;
+    border-radius: 50%
+}
+.Upload span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.Upload .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+.Upload .desc h3{
+	color: #10828C;
+}
+.Upload .desc p{
+	line-height:2;
+	color:#888;
+}
+.Upload .btn-secondary{
+	background:  #F97300;
+	color: #fff;
+	border:0;
+}
+
+
+
+/*analytics*/
+.analytics{
+	margin: 4em 0;
+    position: relative;	
+}
+.analytics h1{
+	color:#F97300;
+	margin: 2em;	
+}
+.analytics img{
+	 height: 15rem;
+	 width: 100%;
+	 margin: 1em;
+
+	
+
+}
+
+/*algo style*/
+
+.algo{
+	margin: 4em 0;
+	position: relative;	
+}
+.algo h1{
+	color:#F97300;
+	margin: 2em;	
+}
+.algo .card{
+	box-shadow: 0 0 20px #ccc;
+}
+.algo .card img{
+	width: 100%;
+	height: 12em;
+}
+@media and (max-width: 768px){
+ .team .item img{
+ 	width: 100%;
+ }	
+}
+.algo .card-title {
+	color:#F97300;
+	 
+}
+.algo .card-body{
+	padding: 1em;
+}
+.team{
+	margin: 4em 0;
+	position: relative;
+
+}
+.team h1{
+	color:#F97300;
+	margin: 2em;	
+}
+.team .item{
+	position: relative;
+	overflow: hidden;	
+}
+.team .des{
+	background: #F97300;
+	color: #fff;
+	text-align: center;
+	border-top-right-radius: 93%;
+	transition:.3s ease-in-out;
+	position: absolute;
+	width: 88%;
+	bottom: 24px;
+
+
+}
+.team .item:hover .des{
+	height: 100%;
+	background:#f973007d;
+    position: absolute;
+	width: 89%;
+	padding: 5em;
+	top: 0;
+	border-top-right-radius: 0;
+}
+.contact-form{
+	margin: 6em 0;
+	position: relative;		
+}
+
+.contact-form h1{
+	padding:2em 1px;
+	color: #F97300; 
+}
+.contact-form .right{
+	max-width: 600px;
+}
+.contact-form .right .btn-secondary{
+	background:  #F97300;
+	color: #fff;
+	border:0;
+}
+.contact-form .right .form-control::placeholder{
+	color: #888;
+	font-size: 16px;
+}
+.svm{
+	margin: 4em 0;
+	position: relative;	
+}
+.svm h1{
+	color:#F97300;
+	margin: 2em;	
+}
+.svm .card{
+	box-shadow: 0 0 10px #ccc;
+}
+.svm .card img{
+	width: 100%;
+	height: 12em;
+}
+@media and (max-width: 768px){
+ .team .item img{
+ 	width: 100%;
+ }	
+}
+.svm .card-title {
+	color:#F97300;
+	 
+}
+.svm .card-body{
+	padding: 1em;
+}
+a {
+	color:#F97300;
+  }
+  
+a:hover {
+	color:#F97300;
+  }
+  #loadLess {
+	display: none;
+  }
+  
+  #loadMore,
+  #loadLess{
+	padding: 10px;
+	text-align: center;
+	background-color: #33739E;
+	color: #fff;
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+	border-color: #fff;
+	box-shadow: 0 1px 1px #ccc;
+	transition: all 600ms ease-in-out;
+	-webkit-transition: all 600ms ease-in-out;
+	-moz-transition: all 600ms ease-in-out;
+	-o-transition: all 600ms ease-in-out;
+  }
+  
+  #loadMore:hover {
+	background-color: #fff;
+	color: #33739E;
+  }
+#content {
+	display: none;
+	padding: 10px;
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+	border-color: black;
+	box-shadow: 0 1px 1px #ccc;
+	margin-bottom: 5px;
+	background-color: #fcfcfc;
+  }
