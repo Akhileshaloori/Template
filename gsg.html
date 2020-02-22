@@ -33,10 +33,15 @@
 	  <h1 class="text-center">Upload Dataset</h1>
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-12">
-				 <form action="/action_page.php">
-    <p>Default file:</p>
-    <input type="file" id="myFile" name="filename2">
-  </form>
+<label for="Upload">Select a Dataset</label>
+
+<select id="upload">
+  <option value="CLEVELAND">CLEVELAND</option>
+  <option value="DATASET">DATASET</option>
+  <option value="DATASET">DATASET</option>
+  <option value="DATASET">DATASET</option>
+</select>
+  
 			</div>
 			<div class="col-lg-8 col-md-8 col-sm-12 right">   
 				   <div class="form-group">
@@ -45,6 +50,17 @@
 				   <div class="form-group">
 				   	 <input type="email" class="form-control form-control-lg" placeholder="Testing" name="Testing">
                    </div>
+				<div>
+					<label>Select a Kernel</label>
+
+<select id="kernel">
+  <option value="linear">linear</option>
+  <option value="polynomial">polynomial</option>
+  <option value="rbf">rbf</option>
+</select>
+  
+				</div>
+				
                 </div>
 				<input type="submit" class="btn btn-secondary btn-block" value="Submit" name="Submit">
 			</div>
