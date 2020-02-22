@@ -6,7 +6,7 @@ To Do:
 - [X] Basic App with form fields
 - [ ] Solid Color UI
 - [ ] Adding pages in next -> button format
-- [ ] Backend for App on Tensorflow
+- [X] Backend for App on Tensorflow:                     Features list pending
 - [ ] Backend Connectivity of Website
 - [ ] Making website as executable
 - [ ] Making web-app compatable with image dataset
