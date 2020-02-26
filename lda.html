@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cardiovascular Disease</title>
+   <!-- add bootstrap css file -->
+
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <style type="text/css">table, th, td, tr {
+  border: 1px solid black;
+}</style>
+      <script>
+        function myFunction() {
+  var x = document.getElementById("form");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function Function() {
+  var x = document.getElementById("practice").value;
+  if (x) {
+  document.getElementById('predict').innerHTML = 100-x;
+}
+}
+
+      </script>
+</head>
+<body>
+  <!-- navbar -->
+
+  <nav class="navbar navbar-expand-lg fixed-top ">
+    <a class="navbar-brand" data-value="header" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-4">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Algorithms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Contact</a>
+        </li>
+      </ul>
+      
+    </div>
+</nav>
+<div class="Upload" id="Upload">
+  <div class="container">
+    <h1 class="text-center">Upload Dataset</h1>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+<label for="Upload">Select a Dataset</label>
+
+<select id="upload">
+  <option value="CLEVELAND">CLEVELAND</option>
+  <option value="DATASET">DATASET</option>
+  <option value="DATASET">DATASET</option>
+  <option value="DATASET">DATASET</option>
+</select>
+  
+      </div>
+      <div><button onclick="myFunction()" class="btn btn-secondary btn-block">Split</button></div>
+      <hidden>
+      <div class="col-lg-8 col-md-8 col-sm-12 right" id="form" style="display: none;">   
+           <div class="form-group" onchange ="Function()" >
+            <label>Traning</label> <input type="number" id="practice" class="form-control form-control-lg" placeholder="Training" name="Training">
+           </div>
+         <label>Testing</label> <div class="form-group" id="predict" style="width: 100%; height: 20px; margin: inherit;">
+            
+                   </div>
+                </div>
+              </hidden>
+      </div>
+
+<div class="buttons" id="buttons">
+  <div class="container">
+  <h1 class="text-center">Results</h1>
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <div><button class="btn btn-secondary btn-block"> Training Results</button></div>
+
+      </div>
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <div><button  class="btn btn-secondary btn-block"> Testing Results</button></div>
+      </div>
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <div><button  class="btn btn-secondary btn-block"> Whole Data results</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+<br></br>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Names</th>
+        <th>Linear</th>
+        <th>Polynomial</th>
+   <th>RBF</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Accuracy</td>
+        <td></td>
+        <td></td>
+  <td></td>
+      </tr>
+      <tr>
+        <td>Precision</td>
+        <td></td>
+        <td></td>
+  <td></td>
+      </tr>
+      <tr>
+        <td>Recall</td>
+        <td></td>
+        <td></td>
+  <td></td>
+      </tr>
+   <tr>
+        <td>F1_Score</td>
+        <td></td>
+        <td></td>
+  <td></td>
+      </tr>
+      <tr>
+        <td>Confusion Matrix</td>
+        <td></td>
+        <td></td>
+  <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </div>
+  </div>
+</div>  
+</body>
+</html>
