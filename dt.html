@@ -6,6 +6,16 @@
 
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="css/main.css">
+      <script>
+      	function myFunction() {
+  var x = document.getElementById("form");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+      </script>
 </head>
 <body>
   <!-- navbar -->
@@ -43,7 +53,8 @@
 </select>
   
 			</div>
-			<div class="col-lg-8 col-md-8 col-sm-12 right">   
+			<button onclick="myFunction()">Split</button>
+			<div class="col-lg-8 col-md-8 col-sm-12 right" id="form" hidden="true">   
 				   <div class="form-group">
 				   	 <input type="text" class="form-control form-control-lg" placeholder="Training" name="Training">
 				   </div>
@@ -51,7 +62,14 @@
 				   	 <input type="email" class="form-control form-control-lg" placeholder="Testing" name="Testing">
                    </div>
 				<div>
-					
+					<label>Select a Kernel</label>
+
+<select id="kernel">
+  <option value="linear">linear</option>
+  <option value="polynomial">polynomial</option>
+  <option value="rbf">rbf</option>
+</select>
+  
 				</div>
 				
                 </div>
