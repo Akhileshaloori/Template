@@ -6,33 +6,135 @@
 
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="css/main.css">
+       <link rel="stylesheet" type="text/css" href="css/footer.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 <body>
+  <!-- navbar -->
 
-<div class="team" id="team">
+  <nav class="navbar navbar-expand-lg fixed-top ">
+	  <a class="nav-link" data-value="header" href="index.html">Home</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-4">
+	      <li class="nav-item">
+	        <a class="nav-link " data-value="algo" href="{{ url_for('index') }}">Algorithms</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link " data-value="team" href="{{ url_for('prediction') }}">Prediction</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link " data-value="contact" href="{{ url_for('index') }}">Contact</a>
+	      </li>
+	    </ul>
+	    
+	  </div>
+</nav>
+ 
+<div class="prediction" id="prediction">
+
 	<div class="container">
 	   <h1 class="text-center">Prediction</h1>
 		<form>
+			<div class="pred">
+			<div class="form-group">
+				  	<label for="cars">Sex:</label>
+
+			<select id="sex">
+			  <option value="male">Male</option>
+			  <option value="female">Female</option>
+			</select>
+		</div>
 			<div class="row">
-				<div class="col-lg-8 col-md-8 col-sm-12 ">
+				<div class="col-md-4 col-lg-4 col-sm-12">
+        	<div class="form-group">
+        		<label>Age(Num)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{age}}" placeholder="Age" name="age">
+				   </div>
+				  
 				   <div class="form-group">
-				   	 <input type="text" class="form-control form-control-lg" placeholder="Name" name="Name">
+				   	<label>CP(Num:1-4)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{cp}}" placeholder="cp" name="cp" max="4" min="1" required>
 				   </div>
-				 <div class="form-group">
-				   	 <input type="text" class="form-control form-control-lg" placeholder="CP" name="CP">
+				   <div class="form-group">
+				   	<label>TRESTBPS(Num:>120)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{trestbps}}" placeholder="trestbps" name="trestbps" min="120" required>
 				   </div>
-				 <div class="form-group">
-					<input type="text" class="form-control form-control-lg" placeholder="Age" name="Age">
-					</div>
-				 <div class="form-group">
-					<input type="text" class="form-control form-control-lg" placeholder="Blood Pressure" name="Blood Pressure">
-			   </div>
+				   <div class="form-group">
+				   	<label>CHOL(Num:126-560)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{chol}}" placeholder="chol" name="chol" min="126" max="560" required>
+				   </div>
+      </div>
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <div class="form-group">
+        	<label>FBS(Num:>120(0) or <120(1))</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{fbs}}" placeholder="fbs" name="fbs" max="1" min="0" required>
+				   </div>
+				   <div class="form-group">
+				   	<label>RESTECG(Num:0-2)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{restecg}}" placeholder="restecg" name="restecg" min="0" max="2" required>
+				   </div>
+				   <div class="form-group">
+				   	<label>THALCH(Num:71-200)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{thalch}}" placeholder="thalch" name="thalch" min="71" max="200" required>
+				   </div>
+				   <div class="form-group">
+				   	<label>EXANG(Num:1=yes,0=no)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{exang}}" placeholder="exang" name="exang" min="0" max="1" required>
+				   </div>
+      </div>
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <div class="form-group">
+        	<label>OLDPEAK(Dec:0.0-6.20)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{oldpeak}}"  placeholder="oldpeak" step="0.01" name="oldpeak" min="0.0" max="6.20" required>
+				   </div>
+				   <div class="form-group">
+				   	<label>SLOPE(Num:1-3)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{slope}}" placeholder="slope" name="slope" min="1" max="3" required>
+				   </div>
+				   <div class="form-group">
+				   	<label>CA(Num:0-3)</label>
+				   	 <input type="number" class="form-control form-control-lg" value="{{ca}}" placeholder="ca" name="ca" min="0" max="3" required>
+				   </div>
+				   <div class="form-group">
+				   	<label>THAL(Num:3 6 7)</label>
+				   	 <input type="text" class="form-control form-control-lg" value="{{thal}}" placeholder="thal" name="thal" pattern=[3|6|7] required>
+				   </div>
+      </div>
+</div>
 				   <input type="submit" class="btn btn-secondary btn-block" value="Submit" name="Submit">
 				</div>
 			</div>
 		</form>
+		<div class="form-group">
+				   	<label>Result</label>
+				   	 <input type="text" class="form-control form-control-lg"  name="result" required>
+				   </div>
 	</div>
 </div>
 </body>
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text"> Cardiovascular Diseases
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
 </html>
