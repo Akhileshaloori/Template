@@ -8,7 +8,7 @@ body{
 	margin: 20px auto;
 	overflow: auto;
 }
-html,h1,h2,h3,h4,h5,h6,a{
+html,h1,h2,h3,h4,h5,h6,a,label{
 	font-family: "Raleway";
 }
 
@@ -23,6 +23,11 @@ html,h1,h2,h3,h4,h5,h6,a{
 	margin-right: 1em !important;
 }
 .nav-link:hover{
+	background: #f4f4f4;
+	color: #f97300;
+
+}
+.nav-brand:hover{
 	background: #f4f4f4;
 	color: #f97300;
 
@@ -42,15 +47,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	background-size: cover;
 	background-position: center;
 }
-.svm{
-	position: relative;
-	background-image: url('../images/heart.jpg');
-	height:60ch ;
-	width: 100%;
-	background-size: cover;
-	background-position: center;
 
-}
 .overlay{
 	position: absolute;
 	min-height: 100%;
@@ -155,7 +152,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	height: 12em;
 }
 @media and (max-width: 768px){
- .team .item img{
+ .prediction .item img{
  	width: 100%;
  }	
 }
@@ -166,20 +163,20 @@ html,h1,h2,h3,h4,h5,h6,a{
 .algo .card-body{
 	padding: 1em;
 }
-.team{
+.prediction{
 	margin: 4em 0;
 	position: relative;
-
 }
-.team h1{
+
+.prediction h1{
 	color:#F97300;
 	margin: 2em;	
 }
-.team .item{
+.prediction .item{
 	position: relative;
 	overflow: hidden;	
 }
-.team .des{
+.prediction .des{
 	background: #F97300;
 	color: #fff;
 	text-align: center;
@@ -191,7 +188,15 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 
 }
-.team .item:hover .des{
+.prediction .btn-secondary{
+	background:  #F97300;
+	color: #fff;
+	border:0;
+}
+label{
+	color:#F97300;
+}
+.prediction .item:hover .des{
 	height: 100%;
 	background:#f973007d;
     position: absolute;
@@ -242,7 +247,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	height: 12em;
 }
 @media and (max-width: 768px){
- .team .item img{
+ .prediction .item img{
  	width: 100%;
  }	
 }
